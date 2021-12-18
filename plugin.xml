@@ -15,13 +15,15 @@ xmlns:android="http://schemas.android.com/apk/res/android"
     </js-module>
 
     <engines>
-        <engine name="cordova" version=">=10.0.0"/>
-        <engine name="cordova-android" version=">=9.0.0"/>
-        <engine name="cordova-ios" version=">=6.0.0"/>
+        <engine name="cordova" version=">=7.1.0"/>
+        <engine name="cordova-android" version=">=8.1.0"/>
+        <engine name="cordova-ios" version=">=5.1.1"/>
     </engines>
 
     <dependency id="cordova-plugin-firebase-analytics" version="~6.1.0"/>
 
+    <dependency id="cordova-outsystems-firebase-core" url="https://github.com/OutSystems/cordova-outsystems-firebase-core.git#1.0.0"/>
+           
     <platform name="ios">
         <preference name="IOS_FIREBASE_POD_VERSION" default="~> 8.8.0"/>
 
