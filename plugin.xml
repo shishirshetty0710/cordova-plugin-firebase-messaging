@@ -20,7 +20,9 @@ xmlns:android="http://schemas.android.com/apk/res/android"
         <engine name="cordova-ios" version=">=5.1.1"/>
     </engines>
 
-    <dependency id="cordova-plugin-firebase-analytics" url="https://github.com/os-adv-dev/cordova-plugin-firebase-analytics.git#outsystems"/>
+    <dependency id="cordova-plugin-firebase-analytics" url="https://github.com/os-adv-dev/cordova-plugin-firebase-analytics.git#outsystems">
+        <variable name="USER_TRACKING_DESCRIPTION_IOS" default="$(PRODUCT_NAME) needs your attention." />
+    </dependency>
 
     <dependency id="cordova-outsystems-firebase-core" url="https://github.com/OutSystems/cordova-outsystems-firebase-core.git#1.0.0"/>
            
