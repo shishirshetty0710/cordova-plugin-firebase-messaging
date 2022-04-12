@@ -20,9 +20,7 @@ xmlns:android="http://schemas.android.com/apk/res/android"
         <engine name="cordova-ios" version=">=5.1.1"/>
     </engines>
 
-    <dependency id="cordova-plugin-firebase-analytics" url="https://github.com/os-adv-dev/cordova-plugin-firebase-analytics.git#outsystems">
-        <variable name="USER_TRACKING_DESCRIPTION_IOS" default="$(USER_TRACKING_DESCRIPTION_IOS) needs your attention." />
-    </dependency>
+    <dependency id="cordova-plugin-firebase-analytics" url="https://github.com/OutSystems/cordova-plugin-firebase-analytics.git#5.0.0-OS2" />
 
     <dependency id="cordova-outsystems-firebase-core" url="https://github.com/OutSystems/cordova-outsystems-firebase-core.git#1.0.0"/>
            
@@ -35,6 +33,11 @@ xmlns:android="http://schemas.android.com/apk/res/android"
                 <param name="ios-package" value="FirebaseMessagingPlugin" />
                 <param name="onload" value="true" />
             </feature>
+        </config-file>
+               
+        <!-- garantees that this message is always set and that other plugins do not change it-->
+        <config-file target="../../config.xml" parent="/widget" mode="replace" platform="ios">
+            <preference name="NSUserTrackingUsageDescription" value="$USER_TRACKING_DESCRIPTION_IOS" />
         </config-file>
 
         <config-file target="*-Info.plist" parent="UIBackgroundModes">
